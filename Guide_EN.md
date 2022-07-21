@@ -30,7 +30,7 @@ ___
 
 #### Сontents:
 1. [Setup](https://github.com/Dimokus88/near/blob/main/Guide_EN.md#setup).
-2. [Create and register a validator](https://github.com/Dimokus88/near/blob/main/Guide_RU.md#create-and-register-a-validator).
+2. [Create and register a validator](https://github.com/Dimokus88/near/blob/main/Guide_EN.md#create-and-register-a-validator).
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 ### Install Akashlytics
 
-Instructions for installing and configuring ***Akashlytics*** [available here](https://github.com/Dimokus88/guides/blob/main/Akashlytics/RU-guide.md).
+Instructions for installing and configuring ***Akashlytics*** [available here](https://github.com/Dimokus88/guides/blob/main/Akashlytics/EN-guide.md).
 
 ### Creating an account (wallet) in the network Near - Shardnet.
 
