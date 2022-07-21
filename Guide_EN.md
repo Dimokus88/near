@@ -156,6 +156,32 @@ In response, the link in explorer will also be received [***example***](https://
 cat ~/.near/validator_key.json | jq
 ```
   
+By default, ***Akash Network*** providers use ***ephemeral data storage***, which means that when the container is restarted, all data can be ***lost*** in order to avoid the node losing your ` validator_key.json` it is recommended to follow the steps from [next paragraph](https://github.com/Dimokus88/near/blob/main/Guide_RU.md#%D0%B7%D0%B0%D0%B3%D1%80% D1%83%D0%B7%D0%BA%D0%B0-%D1%81%D0%B2%D0%BE%D0%B5%D0%B3%D0%BE-validator_keyjson).  
+  
+[To start](https://github.com/Dimokus88/near/blob/main/Guide_EN.md#contents).
+
+___
+  
+  
+## Load your validator_key.json
+  
+To load an existing `validator_key.json` file, you can use the `link_key` built-in variable in [deploy.yml](https://github.com/Dimokus88/near/blob/main/deploy.yml) . One way is to download using ***Google drive***, now we will consider it:
+  
+Place your `validator_key.json` file on Google drive, open read access and copy the link to the file. Next, using [service](https://www.votix.ru/p/sozdat-pryamuyu-ssylku-fajla-google-disk.html), create a link for ***direct download***.
+  
+> Or, you can create a link yourself, for this:
+Access the file on `google` drive and copy its link, it will look like this:
+`https://drive.google.com/open?id=xxxxxxxxxxxxxx-xxxxxxxxxxxx&authuser=gmail%40gmail.com&usp=drive_fs`
+ you need to take the part: `id=xxxxxxxxxxxxxx-xxxxxxxxxxxx` and insert before it: `https://drive.google.com/uc?export=download&`.
+Thus, you will get a link to a ***direct download*** file:
+`https://drive.google.com/uc?export=download&id=xxxxxxxxxxxxxx-xxxxxxxxxxxx` .
+  
+Then, go to your deployment in ***Akashlytics***, `UPDATE` tab. Uncomment the `link_key` line (remove the "#" symbol) and paste your link after the "=" symbol.
+  
+![image](https://user-images.githubusercontent.com/23629420/180197150-3c9d7026-cd19-41c9-be22-d83270d309c0.png)
+  
+After that, press `UPDATE DEPLOYMENT` (or `CREATE DEPOYMENT`), confirm the transaction and your container will be deployed as a validator node. And if the container is reloaded, then your `validator_key.json` will be downloaded and the node will start correctly.
+  
 [To start](https://github.com/Dimokus88/near/blob/main/Guide_EN.md#contents).
 
 ___
