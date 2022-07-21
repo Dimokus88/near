@@ -96,12 +96,12 @@ near login
 
 <p align="center"><img src="https://user-images.githubusercontent.com/23629420/180063083-d6dd3e1a-af55-42a1-a7ec-9d288a88d368.png" width=60% </p>   
 
-* Теперь необходимо создать ключи валидатора (***validator_key.json***), делаем команду:
+* Теперь необходимо создать ключи валидатора (***validator_key.json***), делаем команду где ***ХХ - ваш account id***, для меня команда будет выглядеть так: `near generate-key akash_user.factory.shardnet.near`:
 ```
 near generate-key xx.factory.shardnet.near
 ```
   
-где ***ХХ - ваш account id***, для меня команда будет выглядеть так: `near generate-key akash_user.factory.shardnet.near` , в ответ получите сообщение о том что пара ключей создана:
+В ответ получите сообщение о том что пара ключей создана:
 
 <p align="center"><img src="https://user-images.githubusercontent.com/23629420/180063876-ad6dc292-46e5-45cd-a74f-6d193a19ecd6.png" width=80% </p>   
 
