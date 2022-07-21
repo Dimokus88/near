@@ -155,10 +155,16 @@ near call <staking_pool_id> deposit_and_stake --amount <amount> --accountId <acc
 ```
 cat ~/.near/validator_key.json | jq
 ```
+
+По-умолчанию, провайдеры ***Akash Network***, используют ***эфимерное хранилище данных***, это значит что при перезагрузке контейнера все данные могут быть ***утеряны***, что бы избежать потери нодой вашего `validator_key.json` рекомендуется выполнить действия из [следующего пункта](https://github.com/Dimokus88/near/blob/main/Guide_RU.md#%D0%B7%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B0-%D1%81%D0%B2%D0%BE%D0%B5%D0%B3%D0%BE-validator_keyjson).
+  
+[К началу](https://github.com/Dimokus88/near/blob/main/Guide_RU.md#%D1%81%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D0%BD%D0%B8%D0%B5).
+
+___
   
 ## Загрузка своего validator_key.json
   
-Что бы загрузить имеющийся файл validator_key.json можно воспользоваться встроенной переменной `link_key` в [deploy.yml](https://github.com/Dimokus88/near/blob/main/deploy.yml) . Один из способов - загрузка с помощью Google диск, сейчас мы его и рассмотрим:
+Что бы загрузить имеющийся файл `validator_key.json` можно воспользоваться встроенной переменной `link_key` в [deploy.yml](https://github.com/Dimokus88/near/blob/main/deploy.yml) . Один из способов - загрузка с помощью ***Google диск***, сейчас мы его и рассмотрим:
   
 Разместите ваш файл `validator_key.json` на Google диск, откройте доступ на чтение и скопируйте сслыку на файл. Далее с помощью [сервиса](https://www.votix.ru/p/sozdat-pryamuyu-ssylku-fajla-google-disk.html), создайте ссылку для ***прямого скачивания***.
   
@@ -173,7 +179,7 @@ cat ~/.near/validator_key.json | jq
   
 ![image](https://user-images.githubusercontent.com/23629420/180197150-3c9d7026-cd19-41c9-be22-d83270d309c0.png)
   
-После чего, нажмите `UPDATE DEPLOYMENT` (или `CREATE DEPOYMENT`), подтвердите транзакицию и ваш кантейнер будет развернут уже как нода валидатора.
+После чего, нажмите `UPDATE DEPLOYMENT` (или `CREATE DEPOYMENT`), подтвердите транзакицию и ваш кантейнер будет развернут уже как нода валидатора. И если контейнер будет перезагружен - то ваш `validator_key.json` будет скачан и нода корректно запущена. 
 
   
 [К началу](https://github.com/Dimokus88/near/blob/main/Guide_RU.md#%D1%81%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D0%BD%D0%B8%D0%B5).
