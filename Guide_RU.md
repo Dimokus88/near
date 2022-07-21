@@ -52,8 +52,8 @@ ___
 > P.S. Если у вас уже есть ***validator_key.json***, то просто [вставьте прямую ссылку](https://user-images.githubusercontent.com/23629420/180153979-181daa3c-2e68-43d8-b3ab-622de8f9ff00.png) на скачивание к переменной ```link_key``` и запустите развертывание, ***больше ничего делать не прийдется!*** 
 
 * Дожидаемся этого сообщения во вкладке `LOGS`-`LOGS`:
-  
-<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180058368-5233ff77-984b-46ec-afdb-d9c394097e68.png" width=60% </p>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180196355-6df94bdc-e778-4db6-bb4f-c7306c1579c7.png" width=60% </p>
 
 * Подкючаемся по `ssh` к работающему контейнеру по параметрам указаным в `LEASES`:
 
@@ -160,13 +160,19 @@ cat ~/.near/validator_key.json | jq
 Что бы загрузить имеющийся файл validator_key.json можно воспользоваться встроенной переменной link_key в deploy.yml . Один из способов - загрузка с помощью Google диск, сейчас мы его и рассмотрим:
 Разместите ваш файл validator_key.json на Google диск, откройте доступ на чтение и скопируйте сслыку на файл. Далее с помощью [сервиса](https://www.votix.ru/p/sozdat-pryamuyu-ssylku-fajla-google-disk.html), создайте ссылку для прямого скачивания.
   
- Или, можете самостоятельно создать ссылку, для этого:
-  
+> Или, можете самостоятельно создать ссылку, для этого:  
 Откройте доступ к файлу на `google` диск и скопируйте его ссылку, она будет вида:
 `https://drive.google.com/open?id=xxxxxxxxxxxxxx-xxxxxxxxxxxx&authuser=gmail%40gmail.com&usp=drive_fs`
  вам нужно взять часть: `id=xxxxxxxxxxxxxx-xxxxxxxxxxxx` и вставить перед ней: `https://drive.google.com/uc?export=download&`.  
 Таким образом, у вас получится ссылка на прямое скачивание файла:
 `https://drive.google.com/uc?export=download&id=xxxxxxxxxxxxxx-xxxxxxxxxxxx` .
+  
+Затем, перейдите в ваше развертывание в ***Akashlytics***, вкладка `UPDATE`. Расскомментируйте строку с `link_key` и после символа "=" вставьте вашу ссылку. 
+  
+![image](https://user-images.githubusercontent.com/23629420/180197150-3c9d7026-cd19-41c9-be22-d83270d309c0.png)
+  
+После чего, нажмите `UPDATE DEPLOYMENT` (или `CREATE DEPOYMENT`), подтвердите транзакицию и ваш кантейнер будет развернут уже как нода валидатора.
+
   
 [К началу](https://github.com/Dimokus88/near/blob/main/Guide_RU.md#%D1%81%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D0%BD%D0%B8%D0%B5).
 
