@@ -4,11 +4,12 @@
   
 # Near Stake Wars on Akash Network!
 
-
 | [Akash Network](https://akash.network/) | [Forum Akash Network](https://forum.akash.network/) | 
 |:--:|:--:|
+  
 ___
-Техническая поддержка и на наши новостные каналы:
+  
+Technical support and our news channels:
 
 | [Discord Akash](https://discord.gg/WR56y8Wt) | [Telegram Akash EN](https://t.me/AkashNW) | [TwitterAkash](https://twitter.com/akashnet_) |
 |:--:|:--:|:--:|
@@ -51,31 +52,31 @@ ___
 
 >P.S. If you already have ***validator_key.json*** then just [insert direct link](https://user-images.githubusercontent.com/23629420/180153979-181daa3c-2e68-43d8-b3ab-622de8f9ff00.png ) download to the ```$link_key``` variable and run the deployment, ***nothing else to do!***
 
-* Дожидаемся этого сообщения во вкладке `LOGS`-`LOGS`:
+* We are waiting for this message in the `LOGS`-`LOGS` tab:
   
 <p align="center"><img src="https://user-images.githubusercontent.com/23629420/180058368-5233ff77-984b-46ec-afdb-d9c394097e68.png" width=60% </p>
 
-* Подкючаемся по `ssh` к работающему контейнеру по параметрам указаным в `LEASES`:
+* We connect via `ssh` to a running container using the parameters specified in `LEASES`:
 
 <p align="center"><img src="https://user-images.githubusercontent.com/23629420/180058824-bd322297-39a1-4111-bcde-7b2d49dfc50e.png" width=50% </p>   
 
-Пользователь ***root**, пароль - тот что вы указали в ***манифесте (deploy.yml)***:
+The user is ***root**, the password is the one you specified in the ***manifest (deploy.yml)***:
 
 <p align="center"><img src="https://user-images.githubusercontent.com/23629420/180059094-c278dd3a-f7c6-4eb1-8df3-493429af91ed.png" width=50% </p>   
 
-На данном этапе нода развернута и ***уже начала синхронизироваться***, вы можете посмотреть логи ноды командой:
+At this stage, the node is deployed and *** has already begun to synchronize ***, you can view the node logs with the command:
 ```
 tail -30 /root/.near/nohup.err
 ```
-* Для регистрации валидатора вводим команду:
+* To register a validator, enter the command:
 ```
 near login
 ``` 
-и отвечаем на запрос `y` (yes) , в ответ будет выдана ссылка:
+and answer the request with `y` (yes) , a link will be returned in response:
 
 <p align="center"><img src="https://user-images.githubusercontent.com/23629420/180059646-235c2fd5-805b-4288-9e42-771586a92355.png" width=60% </p>   
 
-* Перейдите по ссылке в браузере, где открыт аккаунт в тестовой сети ***near*** и подтвердите связь ноды и аккаунта:
+* Follow the link in the browser where the account is opened in the ***near*** test network and confirm the link between the node and the account:
 
 <p align="center"><img src="https://user-images.githubusercontent.com/23629420/180060700-55aaa8b6-f43f-4d20-8877-aeae354356ce.png" width=40% </p>   
 
@@ -83,78 +84,78 @@ near login
 
 <p align="center"><img src="https://user-images.githubusercontent.com/23629420/180060903-3b5204bb-c2f5-43ba-84c9-c6f5557c9013.png" width=40% </p>   
 
-Когда в ответ увидите такое сообщение - все в порядке, вернитесь в терминал:
+When you see such a message in response - everything is in order, return to the terminal:
 
 <p align="center"><img src="https://user-images.githubusercontent.com/23629420/180062810-e94ccfe3-7c4e-4b4b-b456-f80a59006f30.png" width=50% </p>   
 
-* Введите имя вашего аккаунта, в ответ получите сообщение о том что аккаунт привязан:
+* Enter the name of your account, in response you will receive a message stating that the account is linked:
 
 <p align="center"><img src="https://user-images.githubusercontent.com/23629420/180063083-d6dd3e1a-af55-42a1-a7ec-9d288a88d368.png" width=60% </p>   
 
-* Теперь необходимо создать ключи валидатора (***validator_key.json***), делаем команду где ***ХХ - ваш account id***, для меня команда будет выглядеть так: `near generate-key akash_user.factory.shardnet.near`:
+* Now you need to create validator keys (***validator_key.json***), do the command where ***XX is your account id***, for me the command will look like this: `near generate-key akash_user.factory.shardnet. near`:
 ```
 near generate-key xx.factory.shardnet.near
 ```
   
-В ответ получите сообщение о том что пара ключей создана:
+In response, you will receive a message stating that a key pair has been created:
 
 <p align="center"><img src="https://user-images.githubusercontent.com/23629420/180063876-ad6dc292-46e5-45cd-a74f-6d193a19ecd6.png" width=80% </p>   
 
-* Скопируйте файл кошелька в папку `.near`, где ***ХХ - ваш account id***. :
+* Copy the wallet file to the `.near` folder, where ***XX is your account id***. :
 ```
 cp ~/.near-credentials/shardnet/ХХ.shardnet.near.json ~/.near/validator_key.json
 ```
 
-  * Внесите изменения файл `validator_key.json`:
+* Modify the `validator_key.json` file:
 ```
 nano ~/.near/validator_key.json
 ```
 
-В поле `account_id` добавьте `.factory`, что бы получилось `ХХ.factory.shardnet.near.json` где ***ХХ - ваш account id***.
+In the `account_id` field add `.factory` to get `XX.factory.shardnet.near.json` where ***XX is your account id***.
 
-Измените название поля с `private_key` на `secret_key`.
+Change the name of the field from `private_key` to `secret_key`.
 
-* Сохраните изменения: нажмите `ctrl+x`, затем `y` и `enter`. Создайте валидатора командой:
+* Save changes: press `ctrl+x`, then `y` and `enter`. Create a validator with the command:
 ```
 near call factory.shardnet.near create_staking_pool '{"staking_pool_id": "<pool id>", "owner_id": "<accountId>", "stake_public_key": "<public key>", "reward_fee_fraction": {"numerator": 5, "denominator": 100}, "code_hash":"DD428g9eqLL8fWUxv8QSpVFzyHi1Qd16P8ephYCTmMSZ"}' --accountId="<accountId>" --amount=30 --gas=300000000000000
 ```
 
-где: 
+where:
  
-`<pool id>` - ваше имя аккаунта (у меня в примере `akash_user`).
+`<pool id>` - your account name (in my example `akash_user`).
   
-`<accountId>` - полный account Id(у меня в примере `akash_user.shardnet.near`).
+`<accountId>` - full account Id (in my example `akash_user.shardnet.near`).
   
-`<public key>` - публичный ключ из `validator_key.json`.
+`<public key>` - public key from `validator_key.json`.
     
 <p align="center"><img src="https://user-images.githubusercontent.com/23629420/180076787-2d0d845c-921b-4ac8-8701-5cdb8e940975.png" width=80% </p>   
     
-На успешную команду вы получите ответс ссылкой в explorer, [***пример***](https://explorer.shardnet.near.org/transactions/V4a6mJzP71PGBKmuqFcwwySFgdXWiLkux4UFfTtzezw):
+On a successful command, you will receive a response with a link in explorer, [***example***](https://explorer.shardnet.near.org/transactions/V4a6mJzP71PGBKmuqFcwwySFgdXWiLkux4UFfTtzezw):
     
 <p align="center"><img src="https://user-images.githubusercontent.com/23629420/180077001-34055547-683a-41d4-aff7-e834e89398d7.png" width=60% </p>   
     
-* Чтобы заделегировать дополнительные токены нужно выполнить команду
+* To delegate additional tokens, you need to run the command:
 ```
 near call <staking_pool_id> deposit_and_stake --amount <amount> --accountId <accountId> --gas=300000000000000
 ```
 
-где: 
+where:
     
-`<staking_pool_id>` - ваше имя валидатора (у меня в примере `akash_user.factory.shardnet.near`).
+`<staking_pool_id>` is your validator name (in my example `akash_user.factory.shardnet.near`).
   
-`<accountId>` - полный account Id (у меня в примере `akash_user.shardnet.near`).
+`<accountId>` - full account Id (in my example `akash_user.shardnet.near`).
   
-`<amount>` - количество токенов для делегации.
+`<amount>` - the number of tokens for the delegation.
 
-В ответ так же поступит ссылка в explorer [***пример***](https://explorer.shardnet.near.org/transactions/CRUdCmQ7tAh8vFk7QkDRhu8iRH9SVtP6RrGKhgEnRE5Q):
+In response, the link in explorer will also be received [***example***](https://explorer.shardnet.near.org/transactions/CRUdCmQ7tAh8vFk7QkDRhu8iRH9SVtP6RrGKhgEnRE5Q):
 
 <p align="center"><img src="https://user-images.githubusercontent.com/23629420/180078082-97aed13b-d040-4521-9c3d-423f8b9b7ab7.png" width=60% </p>
     
-***Валидатор создан***, незабудьте у себя сохранить локально файл `validator_key.json` ,это можно сделать скопировав вывод команды:
+***The validator has been created***, don't forget to save the `validator_key.json` file locally, this can be done by copying the output of the command:
 ```
 cat ~/.near/validator_key.json | jq
 ```
   
-[К началу](https://github.com/Dimokus88/near/blob/main/Guide_RU.md#%D1%81%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D0%BD%D0%B8%D0%B5).
+[To start](https://github.com/Dimokus88/near/blob/main/Guide_EN.md#contents).
 
 ___
