@@ -54,7 +54,7 @@ ___
 
 * We are waiting for this message in the `LOGS`-`LOGS` tab:
   
-<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180058368-5233ff77-984b-46ec-afdb-d9c394097e68.png" width=60% </p>
+<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180196355-6df94bdc-e778-4db6-bb4f-c7306c1579c7.png" width=60% </p>
 
 * We connect via `ssh` to a running container using the parameters specified in `LEASES`:
 
