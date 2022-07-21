@@ -1,57 +1,55 @@
-# Near Stake Wars на Akash Network!
-___
-
-***Near*** проводит эвент ***Stake Wars*** , целью которого является создания валидаторов, которые будут создавать небольшие снимки сети - чанки. Здесь ***Near*** публикует задания. По итогам эвента будут отобраны валидаторы для основной сети.
-
-___
-
-#### Содержание:
-1. [Подготовка](https://github.com/Dimokus88/near/blob/main/README.md#%D0%BF%D0%BE%D0%B4%D0%B3%D0%BE%D1%82%D0%BE%D0%B2%D0%BA%D0%B0).
-2. [Создаем и регистрируем валидатора](https://github.com/Dimokus88/near/blob/main/README.md#%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%B5%D0%BC-%D0%B8-%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B8%D1%80%D1%83%D0%B5%D0%BC-%D0%B2%D0%B0%D0%BB%D0%B8%D0%B4%D0%B0%D1%82%D0%BE%D1%80%D0%B0).
-
-___
-
-## Подготовка
-### Установким Akashlytics
-
-Инструкция по установке и настройке ***Akashlytics*** [доступна по ссылке](https://github.com/Dimokus88/guides/blob/main/Akashlytics/RU-guide.md).
-
-### Создание кошелека в сети Near - Shardnet.
-
-* Переходим на ***[веб версию кошелька](https://wallet.shardnet.near.org/)*** и нажимаем "***Создать учетную запись***"
-
-<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180050999-658def48-2cbf-40a0-8316-422faa9b372c.png" width=50% </p>
-
-* Задаем имя своего аккаунта (это будет ваш ***account id***) и нажимаем "***Reserve My Account ID***"
-
-<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180051536-dcb4499d-279e-4ca0-bb08-1d264fac947c.png" width=30% </p>
-
-* Выбераем метод проверки безопасности, я выберу ***seed*** фразу, и нажимаем "***Continue***":
-
-<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180051771-151ac114-fab7-42b9-970b-390064ee57e5.png" width=30% </p>
-
-Нам продемонстрируют ***seed*** фразу от кошелька, ***сохраните ее***:
-
-<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180052019-6a688fb3-fcab-4edc-8d2b-929258f5b97d.png" width=30% </p>
-
-* Пройдите проверку, вписав нужное слово из seed фразы:
-
-<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180052313-408f528b-f534-4ba3-b082-a57d53b9cbd7.png" width=30% </p>   
-
-Как вы можете заметить, на балансе ***уже есть*** некоторое количество тестовых токенов:
-
-<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180060304-de917049-7502-4053-83ce-dbcd46c7145d.png" width=30% </p>
-
-***Создание кошелька завершено!***
+<div align="center">
   
-[К началу](https://github.com/Dimokus88/near/blob/main/README.md#%D1%81%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D0%BD%D0%B8%D0%B5).
+![pba](https://user-images.githubusercontent.com/23629420/163564929-166f6a01-a6e2-4412-a4e9-40e54c821f05.png)
+  
+# Near Stake Wars on Akash Network!
+
+
+| [Akash Network](https://akash.network/) | [Forum Akash Network](https://forum.akash.network/) | 
+|:--:|:--:|
+___
+Техническая поддержка и на наши новостные каналы:
+
+| [Discord Akash](https://discord.gg/WR56y8Wt) | [Telegram Akash EN](https://t.me/AkashNW) | [TwitterAkash](https://twitter.com/akashnet_) |
+|:--:|:--:|:--:|
+
+</div>
+<div align="center">
+  
+| [Discord NEAR](https://discord.gg/gjD9P3RDer) | [Explorer Shardnet](https://explorer.shardnet.near.org/) | [Site NEAR](https://near.org/) | [Twitter NEAR](https://twitter.com/nearprotocol) |
+|:--:|:--:|:--:|:--:|
+  
+</div>
+
 ___
 
-### Создаем и регистрируем валидатора.
+***Near*** launched the ***Stake Wars***, the purpose of which is to create validators that will create small snapshots of the network - chunks. [Here ***Near*** posts challenges](https://github.com/near/stakewars-iii/tree/main/challenges). As a result of the event, validators for the main network will be selected.
 
-* Разворачиваем контейнер используя ***этот [deploy.yml](https://github.com/Dimokus88/near/blob/main/deploy.yml)***, незабудьте указать пароль пользователя ***root***. 
+___
 
-> P.S. Если у вас уже есть ***validator_key.json***, то просто [вставьте прямую ссылку](https://user-images.githubusercontent.com/23629420/180153979-181daa3c-2e68-43d8-b3ab-622de8f9ff00.png) на скачивание к переменной ```$link_key``` и запустите развертывание, ***больше ничего делать не прийдется!*** 
+#### Сontents:
+1. [Setup](https://github.com/Dimokus88/near/blob/main/Guide_EN.md#setup).
+2. [Create and register a validator](https://github.com/Dimokus88/near/blob/main/Guide_RU.md#create-and-register-a-validator).
+
+___
+
+## Setup
+
+### Install Akashlytics
+
+Instructions for installing and configuring ***Akashlytics*** [available here](https://github.com/Dimokus88/guides/blob/main/Akashlytics/RU-guide.md).
+
+### Creating an account (wallet) in the network Near - Shardnet.
+
+Instructions for creating an account (wallet) [on the Near - Shardnet network](https://github.com/Dimokus88/near/blob/main/Shardnet_wallet.md#create-a-wallet-on-the-near---shardnet-network).
+  
+___
+
+### Create and register a validator.
+
+* Deploy the container using ***this [deploy.yml](https://github.com/Dimokus88/near/blob/main/deploy.yml)***, don't forget to specify the ***root*** password .
+
+>P.S. If you already have ***validator_key.json*** then just [insert direct link](https://user-images.githubusercontent.com/23629420/180153979-181daa3c-2e68-43d8-b3ab-622de8f9ff00.png ) download to the ```$link_key``` variable and run the deployment, ***nothing else to do!***
 
 * Дожидаемся этого сообщения во вкладке `LOGS`-`LOGS`:
   
@@ -102,14 +100,12 @@ near generate-key xx.factory.shardnet.near
 
 <p align="center"><img src="https://user-images.githubusercontent.com/23629420/180063876-ad6dc292-46e5-45cd-a74f-6d193a19ecd6.png" width=80% </p>   
 
-* Скопируйте файл кошелька в папку `.near` :
+* Скопируйте файл кошелька в папку `.near`, где ***ХХ - ваш account id***. :
 ```
 cp ~/.near-credentials/shardnet/ХХ.shardnet.near.json ~/.near/validator_key.json
 ```
 
-где ***ХХ - ваш account id***.
-
-* Внесите изменения файл `validator_key.json`:
+  * Внесите изменения файл `validator_key.json`:
 ```
 nano ~/.near/validator_key.json
 ```
@@ -159,6 +155,6 @@ near call <staking_pool_id> deposit_and_stake --amount <amount> --accountId <acc
 cat ~/.near/validator_key.json | jq
 ```
   
-[К началу](https://github.com/Dimokus88/near/blob/main/README.md#%D1%81%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D0%BD%D0%B8%D0%B5).
+[К началу](https://github.com/Dimokus88/near/blob/main/Guide_RU.md#%D1%81%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D0%BD%D0%B8%D0%B5).
 
 ___
