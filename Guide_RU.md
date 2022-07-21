@@ -1,4 +1,26 @@
+<div align="center">
+  
+![pba](https://user-images.githubusercontent.com/23629420/163564929-166f6a01-a6e2-4412-a4e9-40e54c821f05.png)
+  
 # Near Stake Wars на Akash Network!
+
+
+| [Akash Network](https://akash.network/) | [Forum Akash Network](https://forum.akash.network/) | 
+|:--:|:--:|
+___
+Техническая поддержка на русском языке и на наши новостные каналы:
+
+| [Discord Akash](https://discord.gg/WR56y8Wt) | [Telegram Akash EN](https://t.me/AkashNW) | [Telegram Akash RU](https://t.me/akash_ru) | [TwitterAkash](https://twitter.com/akashnet_) | [TwitterAkashRU](https://twitter.com/akash_ru) |
+|:--:|:--:|:--:|:--:|:--:|
+
+</div>
+<div align="center">
+  
+| [Discord NEAR](https://discord.gg/gjD9P3RDer) | [Explorer Shardnet](https://explorer.shardnet.near.org/) | [Site NEAR](https://near.org/) | [Twitter NEAR](https://twitter.com/nearprotocol) |
+|:--:|:--:|:--:|:--:|
+  
+</div>
+
 ___
 
 ***Near*** проводит эвент ***Stake Wars*** , целью которого является создания валидаторов, которые будут создавать небольшие снимки сети - чанки. [Здесь ***Near*** публикует задания](https://github.com/near/stakewars-iii/tree/main/challenges). По итогам эвента будут отобраны валидаторы для основной сети.
