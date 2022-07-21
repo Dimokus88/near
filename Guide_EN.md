@@ -51,7 +51,7 @@ ___
 
 * Deploy the container using ***this [deploy.yml](https://github.com/Dimokus88/near/blob/main/deploy.yml)***, don't forget to specify the ***root*** password .
 
->P.S. If you already have ***validator_key.json*** then just [insert direct link](https://user-images.githubusercontent.com/23629420/180153979-181daa3c-2e68-43d8-b3ab-622de8f9ff00.png ) download to the ```$link_key``` variable and run the deployment, ***nothing else to do!***
+>P.S. If you already have ***validator_key.json*** then just [insert direct link](https://github.com/Dimokus88/near/blob/main/Guide_EN.md#load-your-validator_keyjson) download to the ```link_key``` variable and run the deployment, ***nothing else to do!***
 
 * We are waiting for this message in the `LOGS`-`LOGS` tab:
   
