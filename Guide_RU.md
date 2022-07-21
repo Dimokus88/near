@@ -78,14 +78,12 @@ near generate-key xx.factory.shardnet.near
 
 <p align="center"><img src="https://user-images.githubusercontent.com/23629420/180063876-ad6dc292-46e5-45cd-a74f-6d193a19ecd6.png" width=80% </p>   
 
-* Скопируйте файл кошелька в папку `.near` :
+* Скопируйте файл кошелька в папку `.near`, где ***ХХ - ваш account id***. :
 ```
 cp ~/.near-credentials/shardnet/ХХ.shardnet.near.json ~/.near/validator_key.json
 ```
 
-где ***ХХ - ваш account id***.
-
-* Внесите изменения файл `validator_key.json`:
+  * Внесите изменения файл `validator_key.json`:
 ```
 nano ~/.near/validator_key.json
 ```
