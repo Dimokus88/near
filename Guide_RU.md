@@ -6,8 +6,8 @@ ___
 ___
 
 #### Содержание:
-1. [Подготовка](https://github.com/Dimokus88/near/blob/main/README.md#%D0%BF%D0%BE%D0%B4%D0%B3%D0%BE%D1%82%D0%BE%D0%B2%D0%BA%D0%B0).
-2. [Создаем и регистрируем валидатора](https://github.com/Dimokus88/near/blob/main/README.md#%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%B5%D0%BC-%D0%B8-%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B8%D1%80%D1%83%D0%B5%D0%BC-%D0%B2%D0%B0%D0%BB%D0%B8%D0%B4%D0%B0%D1%82%D0%BE%D1%80%D0%B0).
+1. [Подготовка](https://github.com/Dimokus88/near/blob/main/Guide_RU.md#подгтовка).
+2. [Создаем и регистрируем валидатора](https://github.com/Dimokus88/near/blob/main/Guide_RU.md#создаем-и-регистрируем-валидатора).
 
 ___
 
@@ -16,33 +16,9 @@ ___
 
 Инструкция по установке и настройке ***Akashlytics*** [доступна по ссылке](https://github.com/Dimokus88/guides/blob/main/Akashlytics/RU-guide.md).
 
-### Создание кошелека в сети Near - Shardnet.
+### Создание аккаунта (кошелька) в сети Near - Shardnet.
 
-* Переходим на ***[веб версию кошелька](https://wallet.shardnet.near.org/)*** и нажимаем "***Создать учетную запись***"
-
-<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180050999-658def48-2cbf-40a0-8316-422faa9b372c.png" width=50% </p>
-
-* Задаем имя своего аккаунта (это будет ваш ***account id***) и нажимаем "***Reserve My Account ID***"
-
-<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180051536-dcb4499d-279e-4ca0-bb08-1d264fac947c.png" width=30% </p>
-
-* Выбераем метод проверки безопасности, я выберу ***seed*** фразу, и нажимаем "***Continue***":
-
-<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180051771-151ac114-fab7-42b9-970b-390064ee57e5.png" width=30% </p>
-
-Нам продемонстрируют ***seed*** фразу от кошелька, ***сохраните ее***:
-
-<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180052019-6a688fb3-fcab-4edc-8d2b-929258f5b97d.png" width=30% </p>
-
-* Пройдите проверку, вписав нужное слово из seed фразы:
-
-<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180052313-408f528b-f534-4ba3-b082-a57d53b9cbd7.png" width=30% </p>   
-
-Как вы можете заметить, на балансе ***уже есть*** некоторое количество тестовых токенов:
-
-<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180060304-de917049-7502-4053-83ce-dbcd46c7145d.png" width=30% </p>
-
-***Создание кошелька завершено!***
+Инструкция по созданию аккаунта (кошелька) в сети Near - Shardnet
   
 [К началу](https://github.com/Dimokus88/near/blob/main/README.md#%D1%81%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D0%BD%D0%B8%D0%B5).
 ___
