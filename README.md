@@ -128,9 +128,9 @@ near call factory.shardnet.near create_staking_pool '{"staking_pool_id": "<pool 
 
 где: 
  
-`<pool id>` - ваше имя аккаунта (например у меня в примере `akash_user`).
+`<pool id>` - ваше имя аккаунта (у меня в примере `akash_user`).
   
-`<accountId>` - полный account Id(например у меня в примере `akash_user.shardnet.near`).
+`<accountId>` - полный account Id(у меня в примере `akash_user.shardnet.near`).
   
 `<public key>` - публичный ключ из `validator_key.json`.
     
@@ -147,9 +147,9 @@ near call <staking_pool_id> deposit_and_stake --amount <amount> --accountId <acc
 
 где: 
     
-`<staking_pool_id>` - ваше имя валидатора (например у меня в примере `akash_user.factory.shardnet.near`).
+`<staking_pool_id>` - ваше имя валидатора (у меня в примере `akash_user.factory.shardnet.near`).
   
-`<accountId>` - полный account Id (например у меня в примере `akash_user.shardnet.near`).
+`<accountId>` - полный account Id (у меня в примере `akash_user.shardnet.near`).
   
 `<amount>` - количество токенов для делегации.
 
