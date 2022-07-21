@@ -12,15 +12,15 @@ ___
 ___
 
 ## Подготовка
-### Установким Akashlytics
+
+### Установка Akashlytics
 
 Инструкция по установке и настройке ***Akashlytics*** [доступна по ссылке](https://github.com/Dimokus88/guides/blob/main/Akashlytics/RU-guide.md).
 
 ### Создание аккаунта (кошелька) в сети Near - Shardnet.
 
-Инструкция по созданию аккаунта (кошелька) [в сети Near - Shardnet](https://github.com/Dimokus88/near/blob/main/Shardnet_wallet.md#создание-аккаунта-кошелька-в-сети-near---shardnet)
+Инструкция по созданию аккаунта (кошелька) [в сети Near - Shardnet](https://github.com/Dimokus88/near/blob/main/Shardnet_wallet.md#создание-аккаунта-кошелька-в-сети-near---shardnet).
   
-[К началу](https://github.com/Dimokus88/near/blob/main/README.md#%D1%81%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D0%BD%D0%B8%D0%B5).
 ___
 
 ### Создаем и регистрируем валидатора.
