@@ -155,6 +155,19 @@ near call <staking_pool_id> deposit_and_stake --amount <amount> --accountId <acc
 cat ~/.near/validator_key.json | jq
 ```
   
+### Загрузка своего validator_key.json
+  
+Что бы загрузить имеющийся файл validator_key.json можно воспользоваться встроенной переменной link_key в deploy.yml . Один из способов - загрузка с помощью Google диск, сейчас мы его и рассмотрим:
+Разместите ваш файл validator_key.json на Google диск, откройте доступ на чтение и скопируйте сслыку на файл. Далее с помощью [сервиса](https://www.votix.ru/p/sozdat-pryamuyu-ssylku-fajla-google-disk.html), создайте ссылку для прямого скачивания.
+  
+ Или, можете самостоятельно создать ссылку, для этого:
+  
+Откройте доступ к файлу на `google` диск и скопируйте его ссылку, она будет вида:
+`https://drive.google.com/open?id=xxxxxxxxxxxxxx-xxxxxxxxxxxx&authuser=gmail%40gmail.com&usp=drive_fs`
+ вам нужно взять часть: `id=xxxxxxxxxxxxxx-xxxxxxxxxxxx` и вставить перед ней: `https://drive.google.com/uc?export=download&`.  
+Таким образом, у вас получится ссылка на прямое скачивание файла:
+`https://drive.google.com/uc?export=download&id=xxxxxxxxxxxxxx-xxxxxxxxxxxx` .
+  
 [К началу](https://github.com/Dimokus88/near/blob/main/Guide_RU.md#%D1%81%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D0%BD%D0%B8%D0%B5).
 
 ___
