@@ -49,7 +49,7 @@ ___
 
 * Разворачиваем контейнер используя ***этот [deploy.yml](https://github.com/Dimokus88/near/blob/main/deploy.yml)***, незабудьте указать пароль пользователя ***root***. 
 
-> P.S. Если у вас уже есть ***validator_key.json***, то просто [вставьте прямую ссылку](https://user-images.githubusercontent.com/23629420/180153979-181daa3c-2e68-43d8-b3ab-622de8f9ff00.png) на скачивание к переменной ```link_key``` и запустите развертывание, ***больше ничего делать не прийдется!*** 
+> P.S. Если у вас уже есть ***validator_key.json***, то просто [вставьте прямую ссылку](https://github.com/Dimokus88/near/blob/main/Guide_RU.md#%D0%B7%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B0-%D1%81%D0%B2%D0%BE%D0%B5%D0%B3%D0%BE-validator_keyjson) на скачивание к переменной ```link_key``` и запустите развертывание, ***больше ничего делать не прийдется!*** 
 
 * Дожидаемся этого сообщения во вкладке `LOGS`-`LOGS`:
 
