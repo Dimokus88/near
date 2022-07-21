@@ -28,7 +28,7 @@ As you can see, there are already some test tokens on the balance of ***already*
 
 ___
 
-# Создание кошелека в сети Near - Shardnet.
+# Создание аккаунта (кошелька) в сети Near - Shardnet.
 
 * Переходим на ***[веб версию кошелька](https://wallet.shardnet.near.org/)*** и нажимаем "***Создать учетную запись***"
 
