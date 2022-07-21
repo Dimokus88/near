@@ -3,7 +3,7 @@ version: "2.0"
 
 services:
   app:
-    image: dimokus88/near:0.0.15
+    image: dimokus88/near:0.0.23
     
     env:
      - "my_root_password=" 
