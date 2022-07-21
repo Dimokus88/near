@@ -31,6 +31,7 @@ ___
 #### Сontents:
 1. [Setup](https://github.com/Dimokus88/near/blob/main/Guide_EN.md#setup).
 2. [Create and register a validator](https://github.com/Dimokus88/near/blob/main/Guide_EN.md#create-and-register-a-validator).
+3. [Load your validator_key.json](https://github.com/Dimokus88/near/blob/main/Guide_EN.md#load-your-validator_keyjson)
 
 ___
 
