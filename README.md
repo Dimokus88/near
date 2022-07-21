@@ -58,15 +58,15 @@ ___
 
 Дожидаемся этого сообщения во вкладке ```LOGS```-```LOGS```:
   
-<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180058368-5233ff77-984b-46ec-afdb-d9c394097e68.png" width=50% </p>
+<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180058368-5233ff77-984b-46ec-afdb-d9c394097e68.png" width=60% </p>
 
 После чего подкючаемся по ```ssh``` к работающему контейнеру по параметрам указаным в ```LEASES```:
 
-<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180058824-bd322297-39a1-4111-bcde-7b2d49dfc50e.png" width=30% </p>   
+<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180058824-bd322297-39a1-4111-bcde-7b2d49dfc50e.png" width=50% </p>   
 
 Пользователь ***root**, пароль - тот что вы указали в ***манифесте (deploy.yml)***:
 
-<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180059094-c278dd3a-f7c6-4eb1-8df3-493429af91ed.png" width=30% </p>   
+<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180059094-c278dd3a-f7c6-4eb1-8df3-493429af91ed.png" width=50% </p>   
 
 На данном этапе нода развернута и ***уже начала синхронизироваться***, вы можете посмотреть логи ноды командой:
 
@@ -74,15 +74,15 @@ ___
 
 Для регисрации валидатора вводим команду ```near login``` и отвечаем на запрос ```y``` (yes) , в ответ будет выдана ссылка:
 
-<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180059646-235c2fd5-805b-4288-9e42-771586a92355.png" width=30% </p>   
+<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180059646-235c2fd5-805b-4288-9e42-771586a92355.png" width=60% </p>   
 
 Перейдите по ссылке в браузере, где открыт аккаунт в тестовой сети ***near*** и подтвердите связь ноды и аккаунта:
 
-<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180060700-55aaa8b6-f43f-4d20-8877-aeae354356ce.png" width=30% </p>   
+<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180060700-55aaa8b6-f43f-4d20-8877-aeae354356ce.png" width=40% </p>   
 
-<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180060751-7ca65aa2-e39e-4321-8f10-842b0467913b.png" width=30% </p>   
+<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180060751-7ca65aa2-e39e-4321-8f10-842b0467913b.png" width=40% </p>   
 
-<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180060903-3b5204bb-c2f5-43ba-84c9-c6f5557c9013.png" width=30% </p>   
+<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180060903-3b5204bb-c2f5-43ba-84c9-c6f5557c9013.png" width=40% </p>   
 
 Когда в ответ увидите такое сообщение - все в порядке, вернитесь в терминал:
 
@@ -90,13 +90,13 @@ ___
 
 Введите имя вашего аккаунта, в ответ получите сообщение о том что аккаунт привязан:
 
-<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180063083-d6dd3e1a-af55-42a1-a7ec-9d288a88d368.png" width=30% </p>   
+<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180063083-d6dd3e1a-af55-42a1-a7ec-9d288a88d368.png" width=60% </p>   
 
 Теперь необходимо создать ключи валидатора (***validator_key.json***), делаем команду ```near generate-key xx.factory.shardnet.near``` где ***ХХ - ваш account id***, для меня команда будет выглядеть так:
 
 ```near generate-key akash_user.factory.shardnet.near``` , в ответ получите сообщение о том что пара ключей создана:
 
-<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180063876-ad6dc292-46e5-45cd-a74f-6d193a19ecd6.png" width=30% </p>   
+<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180063876-ad6dc292-46e5-45cd-a74f-6d193a19ecd6.png" width=80% </p>   
 
 Скопируйте файл кошелька в папку ```.near``` :
 
@@ -122,11 +122,11 @@ ___
   
 ```<public key>``` - публичный ключ из ```validator_key.json```.
     
-<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180076787-2d0d845c-921b-4ac8-8701-5cdb8e940975.png" width=30% </p>   
+<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180076787-2d0d845c-921b-4ac8-8701-5cdb8e940975.png" width=80% </p>   
     
 На успешную команду вы получите ответ [***с ссылкой в explorer***](https://explorer.shardnet.near.org/transactions/V4a6mJzP71PGBKmuqFcwwySFgdXWiLkux4UFfTtzezw):
     
-<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180077001-34055547-683a-41d4-aff7-e834e89398d7.png" width=30% </p>   
+<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180077001-34055547-683a-41d4-aff7-e834e89398d7.png" width=60% </p>   
     
 Чтобы заделегировать дополнительные токены нужно выполнить команду
     
@@ -140,7 +140,7 @@ ___
 
 В ответ так же поступит [***ссылка в explorer***](https://explorer.shardnet.near.org/transactions/CRUdCmQ7tAh8vFk7QkDRhu8iRH9SVtP6RrGKhgEnRE5Q):
 
-<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180078082-97aed13b-d040-4521-9c3d-423f8b9b7ab7.png" width=30% </p>
+<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180078082-97aed13b-d040-4521-9c3d-423f8b9b7ab7.png" width=60% </p>
     
 ***Валидатор создан***, незабудьте у себя сохранить локально файл ```validator_key.json``` ,это можно сделать скопировав вывод команды ```cat ~/.near/validator_key.json | jq```
 ___
