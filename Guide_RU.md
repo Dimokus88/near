@@ -28,7 +28,7 @@ ___
 ___
 
 #### Содержание:
-1. [Подготовка](https://github.com/Dimokus88/near/blob/main/Guide_RU.md#подгтовка).
+1. [Подготовка](https://github.com/Dimokus88/near/blob/main/Guide_RU.md#подготовка).
 2. [Создаем и регистрируем валидатора](https://github.com/Dimokus88/near/blob/main/Guide_RU.md#создаем-и-регистрируем-валидатора).
 
 ___
