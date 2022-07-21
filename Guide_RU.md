@@ -30,6 +30,7 @@ ___
 #### Содержание:
 1. [Подготовка](https://github.com/Dimokus88/near/blob/main/Guide_RU.md#подготовка).
 2. [Создаем и регистрируем валидатора](https://github.com/Dimokus88/near/blob/main/Guide_RU.md#создаем-и-регистрируем-валидатора).
+3. [Загрузка validator_key.json](https://github.com/Dimokus88/near/blob/main/Guide_RU.md#%D0%B7%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B0-%D1%81%D0%B2%D0%BE%D0%B5%D0%B3%D0%BE-validator_keyjson).
 
 ___
 
@@ -45,7 +46,7 @@ ___
   
 ___
 
-### Создаем и регистрируем валидатора.
+## Создаем и регистрируем валидатора.
 
 * Разворачиваем контейнер используя ***этот [deploy.yml](https://github.com/Dimokus88/near/blob/main/deploy.yml)***, незабудьте указать пароль пользователя ***root***. 
 
@@ -155,7 +156,7 @@ near call <staking_pool_id> deposit_and_stake --amount <amount> --accountId <acc
 cat ~/.near/validator_key.json | jq
 ```
   
-### Загрузка своего validator_key.json
+## Загрузка своего validator_key.json
   
 Что бы загрузить имеющийся файл validator_key.json можно воспользоваться встроенной переменной `link_key` в [deploy.yml](https://github.com/Dimokus88/near/blob/main/deploy.yml) . Один из способов - загрузка с помощью Google диск, сейчас мы его и рассмотрим:
   
