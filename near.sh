@@ -70,7 +70,8 @@ git clone "https://github.com/near/nearcore"
 sleep 5
 cd nearcore
 git fetch
-git checkout master
+commit=`curl -s https://raw.githubusercontent.com/near/stakewars-iii/main/commit.md`
+git checkout $commit
 echo  ================= Начинаю сборку ==================
 echo  =================== Start build ===================
 sleep 5
