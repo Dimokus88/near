@@ -1,0 +1,165 @@
+#!/bin/bash
+# By Dimokus (https://t.me/Dimokus)
+source $HOME/.bashrc
+TZ=Europe/Kiev
+ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+apt-get update
+apt-get upgrade -y
+apt-get install -y sudo nano wget tar zip unzip jq goxkcdpwgen ssh nginx build-essential git make gcc nvme-cli pkg-config libssl-dev libleveldb-dev clang bsdmainutils ncdu libleveldb-dev
+echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
+(echo ${my_root_password}; echo ${my_root_password}) | passwd root
+service ssh restart
+service nginx start
+sleep 5
+sudo apt-get install -y nano runit
+runsvdir -P /etc/service &
+source $HOME/.bashrc
+
+
+SYNH(){
+	for ((;;))
+	do
+	tail -100 /var/log/neard/current
+	done
+	}
+sleep 5
+
+
+apt update && apt upgrade -y
+apt install sudo nano -y
+curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -  
+sudo apt install build-essential nodejs -y
+PATH="$PATH"
+node -v
+npm -v
+sudo npm install -g near-cli
+export NEAR_ENV=shardnet
+echo 'export NEAR_ENV=shardnet' >> ~/.bashrc
+near proposals
+
+echo  ===================near установлен ===================
+
+sleep 10
+sudo apt install -y git binutils-dev libcurl4-openssl-dev zlib1g-dev libdw-dev libiberty-dev cmake gcc g++ protobuf-compiler libssl-dev pkg-config clang llvm cargo
+sudo apt install python3-pip -y
+USER_BASE_BIN=$(python3 -m site --user-base)/bin
+export PATH="$USER_BASE_BIN:$PATH"
+sudo apt install clang build-essential make -y
+curl "https://sh.rustup.rs" -sSf | sh -s -- -y
+source $HOME/.cargo/env
+rustup update stable
+source $HOME/.cargo/env
+sleep 20
+cd /root/
+git clone "https://github.com/near/nearcore"
+sleep 5
+cd nearcore
+git fetch
+commit=`curl -s https://raw.githubusercontent.com/near/stakewars-iii/main/commit.md`
+git checkout $commit
+echo  ================= Начинаю сборку ==================
+echo  =================== Start build ===================
+sleep 5
+cargo build -p neard --release --features shardnet
+cp /root/nearcore/target/release/neard /usr/local/bin/
+cd /root/
+echo  =================== Завершена сборка ====================
+echo  =================== Build s completed ===================
+neard init --chain-id shardnet --download-genesis
+ls /root/ -a 
+ls /root/.near -a 
+ls / -a 
+echo  ======================= nearcore установлен =====================
+echo  =================== install nearcore complete ===================
+sleep 10
+cd .near
+rm config.json
+wget -O /root/.near/config.json "https://s3-us-west-1.amazonaws.com/build.nearprotocol.com/nearcore-deploy/shardnet/config.json"
+sleep 5
+sudo apt-get install awscli -y
+pwd
+sleep 10
+cd /root/.near/
+rm /root/.near/genesis.json
+wget https://s3-us-west-1.amazonaws.com/build.nearprotocol.com/nearcore-deploy/shardnet/genesis.json
+sleep 10
+cd /root/.near/
+pip3 install awscli --upgrade
+echo все ОК
+sleep 20
+if  [[  -z $link_key  ]]
+then
+source $HOME/.bashrc
+echo =Run node...=
+cd /
+mkdir /root/neard
+mkdir /root/neard/log
+
+cat > /root/neard/run <<EOF 
+#!/bin/bash
+exec 2>&1
+exec neard run
+EOF
+
+chmod +x /root/neard/run
+LOG=/var/log/neard
+echo 'export LOG='${LOG} >> $HOME/.bashrc
+
+cat > /root/neard/log/run <<EOF 
+#!/bin/bash
+mkdir $LOG
+exec svlogd -tt $LOG
+EOF
+
+chmod +x /root/neard/log/run
+ln -s /root/neard /etc/service
+source $HOME/.bashrc
+
+echo ====================================================================================================
+echo ====== validator_key.json not found, please create and completed of registration your account ======
+echo ====================================================================================================
+echo ==== validator_key.json не обнаружен, пожалуйста создайте и завершите регистрацию вашего аккаунта ==
+echo ====================================================================================================
+echo ===================================================================================================================================
+echo ===== Refer to instructions to address https://github.com/Dimokus88/near/blob/main/Guide_EN.md#create-and-register-a-validator ====
+echo ===================================================================================================================================
+echo === Обратитесь к инструкции по адресу https://github.com/Dimokus88/near/blob/main/Guide_RU.md#создаем-и-регистрируем-валидатора ===
+echo ===================================================================================================================================
+sleep infinity
+fi
+echo ===============================================================
+echo ====== validator_key.json is found, start validator node ======
+echo ===============================================================
+echo ==== validator_key.json  обнаружен, запускаю ноду валидатора ==
+echo ===============================================================
+rm /root/.near/validator_key.json
+wget -O /root/.near/validator_key.json $link_key 
+
+
+source $HOME/.bashrc
+echo =Run node...=
+cd /
+mkdir /root/neard
+mkdir /root/neard/log
+
+cat > /root/neard/run <<EOF 
+#!/bin/bash
+exec 2>&1
+exec neard run
+EOF
+
+chmod +x /root/neard/run
+LOG=/var/log/neard
+echo 'export LOG='${LOG} >> $HOME/.bashrc
+
+cat > /root/neard/log/run <<EOF 
+#!/bin/bash
+mkdir $LOG
+exec svlogd -tt $LOG
+EOF
+
+chmod +x /root/neard/log/run
+ln -s /root/neard /etc/service
+source $HOME/.bashrc
+
+SYNH
