@@ -1,43 +1,35 @@
 #!/bin/bash
-
-SYNH(){
-	if [[ -z `ps -o pid= -p $nodepid` ]]
-	then
-		cd /root/.near
-		echo ===================================================================
-		echo ===Нода не работает, перезапускаю...Node not working, restart...===
-		echo ===================================================================
-		rm ./nohup.out
-		rm ./nohup.err
-		nohup  neard run >nohup.out 2>nohup.err </dev/null &  nodepid=`echo $!`
-		echo $nodepid
-		sleep 5
-	else
-		cd /root/.near
-		echo =================================
-		echo ===Нода работает.Node working.===
-		echo =================================
-		tail ./nohup.out
-		tail ./nohup.err
-		echo $nodepid
-	fi
-	}
-	
+# By Dimokus (https://t.me/Dimokus)
+source $HOME/.bashrc
+TZ=Europe/Kiev
+ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+apt-get update
+apt-get upgrade -y
+apt-get install -y sudo nano wget tar zip unzip jq goxkcdpwgen ssh nginx build-essential git make gcc nvme-cli pkg-config libssl-dev libleveldb-dev clang bsdmainutils ncdu libleveldb-dev
 echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
 (echo ${my_root_password}; echo ${my_root_password}) | passwd root
 service ssh restart
 service nginx start
-nodepid=0
-t=1
+sleep 5
+sudo apt-get install -y nano runit
+runsvdir -P /etc/service &
+source $HOME/.bashrc
+
+
+SYNH(){
+	for ((;;))
+	do
+	tail -100 /var/log/neard/current
+	done
+	}
+	
 sleep 5
 if [[ -e ~/.near/validator_key.json ]]
 then
-	while [[ "$t" -eq 1 ]]
+	for ((;;))
 	do
-		SYNH
-		date
-		sleep 5m
-	done
+	tail -100 /var/log/neard/current
+	done	
 fi
 
 apt update && apt upgrade -y
@@ -55,7 +47,7 @@ near proposals
 echo  ===================near установлен ===================
 
 sleep 10
-sudo apt install -y git binutils-dev libcurl4-openssl-dev zlib1g-dev libdw-dev libiberty-dev cmake gcc g++ python docker.io protobuf-compiler libssl-dev pkg-config clang llvm cargo
+sudo apt install -y git binutils-dev libcurl4-openssl-dev zlib1g-dev libdw-dev libiberty-dev cmake gcc g++ protobuf-compiler libssl-dev pkg-config clang llvm cargo
 sudo apt install python3-pip -y
 USER_BASE_BIN=$(python3 -m site --user-base)/bin
 export PATH="$USER_BASE_BIN:$PATH"
@@ -104,7 +96,32 @@ echo все ОК
 sleep 20
 if  [[  -z $link_key  ]]
 then
-nohup  neard run >nohup.out 2>nohup.err </dev/null &
+source $HOME/.bashrc
+echo =Run node...=
+cd /
+mkdir /root/neard
+mkdir /root/neard/log
+
+cat > /root/neard/run <<EOF 
+#!/bin/bash
+exec 2>&1
+exec neard run
+EOF
+
+chmod +x /root/neard/run
+LOG=/var/log/neard
+echo 'export LOG='${LOG} >> $HOME/.bashrc
+
+cat > /root/neard/log/run <<EOF 
+#!/bin/bash
+mkdir $LOG
+exec svlogd -tt $LOG
+EOF
+
+chmod +x /root/neard/log/run
+ln -s /root/neard /etc/service
+source $HOME/.bashrc
+
 echo ====================================================================================================
 echo ====== validator_key.json not found, please create and completed of registration your account ======
 echo ====================================================================================================
@@ -124,8 +141,35 @@ echo ==== validator_key.json  обнаружен, запускаю ноду ва
 echo ===============================================================
 rm /root/.near/validator_key.json
 wget -O /root/.near/validator_key.json $link_key 
-nohup  neard run >nohup.out 2>nohup.err </dev/null &  nodepid=`echo $!`
-echo $nodepid
+
+
+source $HOME/.bashrc
+echo =Run node...=
+cd /
+mkdir /root/neard
+mkdir /root/neard/log
+
+cat > /root/neard/run <<EOF 
+#!/bin/bash
+exec 2>&1
+exec neard run
+EOF
+
+chmod +x /root/neard/run
+LOG=/var/log/neard
+echo 'export LOG='${LOG} >> $HOME/.bashrc
+
+cat > /root/neard/log/run <<EOF 
+#!/bin/bash
+mkdir $LOG
+exec svlogd -tt $LOG
+EOF
+
+chmod +x /root/neard/log/run
+ln -s /root/neard /etc/service
+source $HOME/.bashrc
+
+
 while [[ "$t" -eq 1 ]]
 do
 SYNH
