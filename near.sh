@@ -1,35 +1,18 @@
 #!/bin/bash
-# By Dimokus (https://t.me/Dimokus)
-source $HOME/.bashrc
-TZ=Europe/Kiev
-ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-apt-get update
-apt-get upgrade -y
-apt-get install -y sudo nano wget tar zip unzip jq goxkcdpwgen ssh nginx build-essential git make gcc nvme-cli pkg-config libssl-dev libleveldb-dev clang bsdmainutils ncdu libleveldb-dev
 echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
 (echo ${my_root_password}; echo ${my_root_password}) | passwd root
 service ssh restart
 service nginx start
-sleep 5
-sudo apt-get install -y nano runit
-runsvdir -P /etc/service &
-source $HOME/.bashrc
-
-
-SYNH(){
-	for ((;;))
-	do
-	tail -100 /var/log/neard/current
-	done
-	}
-	
+t=1
 sleep 5
 if [[ -e ~/.near/validator_key.json ]]
 then
-	for ((;;))
+	while [[ "$t" -eq 1 ]]
 	do
-	tail -100 /var/log/neard/current
-	done	
+		tail -200 /var/log/$binary/current
+		date
+		sleep 5m
+	done
 fi
 
 apt update && apt upgrade -y
@@ -47,7 +30,7 @@ near proposals
 echo  ===================near установлен ===================
 
 sleep 10
-sudo apt install -y git binutils-dev libcurl4-openssl-dev zlib1g-dev libdw-dev libiberty-dev cmake gcc g++ protobuf-compiler libssl-dev pkg-config clang llvm cargo
+sudo apt install -y git binutils-dev libcurl4-openssl-dev zlib1g-dev libdw-dev libiberty-dev cmake gcc g++ python docker.io protobuf-compiler libssl-dev pkg-config clang llvm cargo
 sudo apt install python3-pip -y
 USER_BASE_BIN=$(python3 -m site --user-base)/bin
 export PATH="$USER_BASE_BIN:$PATH"
@@ -60,16 +43,17 @@ sleep 20
 cd /root/
 git clone "https://github.com/near/nearcore"
 sleep 5
+commit=`curl -s https://raw.githubusercontent.com/near/stakewars-iii/main/commit.md`
 cd nearcore
 git fetch
-commit=`curl -s https://raw.githubusercontent.com/near/stakewars-iii/main/commit.md`
 git checkout $commit
 echo  ================= Начинаю сборку ==================
 echo  =================== Start build ===================
 sleep 5
 cargo build -p neard --release --features shardnet
-cp /root/nearcore/target/release/neard /usr/local/bin/
+cp /root/nearcore/target/release/neard /usr/bin/
 cd /root/
+
 echo  =================== Завершена сборка ====================
 echo  =================== Build s completed ===================
 neard init --chain-id shardnet --download-genesis
@@ -96,32 +80,7 @@ echo все ОК
 sleep 20
 if  [[  -z $link_key  ]]
 then
-source $HOME/.bashrc
-echo =Run node...=
-cd /
-mkdir /root/neard
-mkdir /root/neard/log
-
-cat > /root/neard/run <<EOF 
-#!/bin/bash
-exec 2>&1
-exec neard run
-EOF
-
-chmod +x /root/neard/run
-LOG=/var/log/neard
-echo 'export LOG='${LOG} >> $HOME/.bashrc
-
-cat > /root/neard/log/run <<EOF 
-#!/bin/bash
-mkdir $LOG
-exec svlogd -tt $LOG
-EOF
-
-chmod +x /root/neard/log/run
-ln -s /root/neard /etc/service
-source $HOME/.bashrc
-
+nohup  neard run >nohup.out 2>nohup.err </dev/null &
 echo ====================================================================================================
 echo ====== validator_key.json not found, please create and completed of registration your account ======
 echo ====================================================================================================
@@ -141,38 +100,35 @@ echo ==== validator_key.json  обнаружен, запускаю ноду ва
 echo ===============================================================
 rm /root/.near/validator_key.json
 wget -O /root/.near/validator_key.json $link_key 
-
-
-source $HOME/.bashrc
+#===========ЗАПУСК НОДЫ============
 echo =Run node...=
 cd /
-mkdir /root/neard
-mkdir /root/neard/log
-
-cat > /root/neard/run <<EOF 
+binary=neard
+mkdir /root/$binary
+mkdir /root/$binary/log
+    
+cat > /root/$binary/run <<EOF 
 #!/bin/bash
 exec 2>&1
-exec neard run
+exec $binary run
 EOF
+chmod +x /root/$binary/run
+LOG=/var/log/$binary
 
-chmod +x /root/neard/run
-LOG=/var/log/neard
-echo 'export LOG='${LOG} >> $HOME/.bashrc
-
-cat > /root/neard/log/run <<EOF 
+cat > /root/$binary/log/run <<EOF 
 #!/bin/bash
 mkdir $LOG
 exec svlogd -tt $LOG
 EOF
-
-chmod +x /root/neard/log/run
-ln -s /root/neard /etc/service
-source $HOME/.bashrc
-
-
+chmod +x /root/$binary/log/run
+ln -s /root/$binary /etc/service
+sleep 20
+tail -200 /var/log/$binary/current
+sleep 20
+#===========================================================
 while [[ "$t" -eq 1 ]]
 do
-SYNH
+tail -200 /var/log/$binary/current
 date
 sleep 5m
 done
