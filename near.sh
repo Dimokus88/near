@@ -4,7 +4,8 @@ apt install sudo nano -y
 echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
 (echo ${my_root_password}; echo ${my_root_password}) | passwd root
 service ssh restart
-service nginx start
+sleep 5
+runsvdir -P /etc/service &
 t=1
 sleep 5
 if [[ -e ~/.near/validator_key.json ]]
