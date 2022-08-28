@@ -1,4 +1,6 @@
 #!/bin/bash
+apt update && apt upgrade -y
+apt install sudo nano -y
 echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
 (echo ${my_root_password}; echo ${my_root_password}) | passwd root
 service ssh restart
@@ -15,8 +17,7 @@ then
 	done
 fi
 
-apt update && apt upgrade -y
-apt install sudo nano -y
+
 curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -  
 sudo apt install build-essential nodejs -y
 PATH="$PATH"
