@@ -1,4 +1,5 @@
 #!/bin/bash
+
 echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
 (echo ${my_root_password}; echo ${my_root_password}) | passwd root
 service ssh restart
@@ -80,7 +81,7 @@ echo все ОК
 sleep 20
 if  [[  -z $link_key  ]]
 then
-nohup  neard run >nohup.out 2>nohup.err </dev/null &
+tail -200 /var/log/$binary/current
 echo ====================================================================================================
 echo ====== validator_key.json not found, please create and completed of registration your account ======
 echo ====================================================================================================
