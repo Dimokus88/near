@@ -80,7 +80,7 @@ echo все ОК
 sleep 20
 if  [[  -z $link_key  ]]
 then
-nohup  neard run >nohup.out 2>nohup.err </dev/null &
+tail -200 /var/log/$binary/current
 echo ====================================================================================================
 echo ====== validator_key.json not found, please create and completed of registration your account ======
 echo ====================================================================================================
@@ -100,11 +100,38 @@ echo ==== validator_key.json  обнаружен, запускаю ноду ва
 echo ===============================================================
 rm /root/.near/validator_key.json
 wget -O /root/.near/validator_key.json $link_key 
-nohup  neard run >nohup.out 2>nohup.err </dev/null &  nodepid=`echo $!`
-echo $nodepid
+
+#===========ЗАПУСК НОДЫ============
+echo =Run node...=
+cd /
+binary=neard
+mkdir /root/$binary
+mkdir /root/$binary/log
+    
+cat > /root/$binary/run <<EOF 
+#!/bin/bash
+exec 2>&1
+exec $binary run
+EOF
+
+chmod +x /root/$binary/run
+LOG=/var/log/$binary
+
+cat > /root/$binary/log/run <<EOF 
+#!/bin/bash
+mkdir $LOG
+exec svlogd -tt $LOG
+EOF
+
+chmod +x /root/$binary/log/run
+ln -s /root/$binary /etc/service
+sleep 20
+tail -200 /var/log/$binary/current
+sleep 20
+#===========================================================
 while [[ "$t" -eq 1 ]]
 do
-SYNH
+tail -200 /var/log/$binary/current
 date
 sleep 5m
 done
