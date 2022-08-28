@@ -3,10 +3,15 @@ version: "2.0"
 
 services:
   app:
-    image: dimokus88/near:0.0.23    
+    image: dimokus88/ubuntu:1.1
     env:
      - "my_root_password=" 
      #- "link_key="
+    command:
+      - "bash"
+      - "-c"
+    args:
+      - 'curl -s https://raw.githubusercontent.com/Dimokus88/near/main/main.sh | bash '
     expose:
       - port: 80
         as: 80
