@@ -166,14 +166,13 @@ ___
   
 Что бы загрузить имеющийся файл `validator_key.json` можно воспользоваться встроенной переменной `link_key` в [deploy.yml](https://github.com/Dimokus88/near/blob/main/deploy.yml) . Один из способов - загрузка с помощью ***Google диск***, сейчас мы его и рассмотрим:
   
-Разместите ваш файл `validator_key.json` на Google диск, откройте доступ на чтение и скопируйте сслыку на файл. Далее с помощью [сервиса](https://www.votix.ru/p/sozdat-pryamuyu-ssylku-fajla-google-disk.html), создайте ссылку для ***прямого скачивания***.
+Я мог бы вам посоветовать использовать готовый генератор ссылок из интернета, но речь идет о приватном ключе, так что безопаснее если вы создадите ссылку самостоятельно:  
   
-> Или, можете самостоятельно создать ссылку, для этого:  
 Откройте доступ к файлу на `google` диск и скопируйте его ссылку, она будет вида:
 `https://drive.google.com/open?id=xxxxxxxxxxxxxx-xxxxxxxxxxxx&authuser=gmail%40gmail.com&usp=drive_fs`
  вам нужно взять часть: `id=xxxxxxxxxxxxxx-xxxxxxxxxxxx` и вставить перед ней: `https://drive.google.com/uc?export=download&`.  
 Таким образом, у вас получится ссылка на ***прямое скачивание*** файла:
-`https://drive.google.com/uc?export=download&id=xxxxxxxxxxxxxx-xxxxxxxxxxxx` .
+`https://drive.google.com/uc?export=download&id=xxxxxxxxxxxxxx-xxxxxxxxxxxx` . Проверьте ссылку, перейдя по ней в браузере, должно сразу начаться скачавание файла. 
   
 Затем, перейдите в ваше развертывание в ***Akashlytics***, вкладка `UPDATE`. Раскомментируйте строку с `link_key` (удалив символ "#") и после символа "=" вставьте вашу ссылку. 
   
