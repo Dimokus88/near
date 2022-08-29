@@ -20,6 +20,8 @@ Technical support and our news channels:
 | [Discord NEAR](https://discord.gg/gjD9P3RDer) | [Explorer Shardnet](https://explorer.shardnet.near.org/) | [Site NEAR](https://near.org/) | [Twitter NEAR](https://twitter.com/nearprotocol) |
 |:--:|:--:|:--:|:--:|
   
+  [Гайд на русском языке.](https://github.com/Dimokus88/near/blob/main/Guide_RU.md)
+  
 </div>
 
 ___
