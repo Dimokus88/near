@@ -65,15 +65,20 @@ The user is ***root**, the password is the one you specified in the ***manifest 
 
 <p align="center"><img src="https://user-images.githubusercontent.com/23629420/180059094-c278dd3a-f7c6-4eb1-8df3-493429af91ed.png" width=50% </p>   
 
-At this stage, the node is deployed and *** has already begun to synchronize ***, you can view the node logs with the command:
+At this stage, the node is deployed and  ***has already begun to synchronize*** , you can view the node logs with the command:
+  
 ```
 tail -30 /root/.near/nohup.err
 ```
+  
 * To register a validator, enter the command:
+  
 ```
 near login
 ``` 
+  
 and answer the request with `y` (yes) , a link will be returned in response:
+  
 
 <p align="center"><img src="https://user-images.githubusercontent.com/23629420/180059646-235c2fd5-805b-4288-9e42-771586a92355.png" width=60% </p>   
 
