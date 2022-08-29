@@ -11,7 +11,7 @@ services:
       - "bash"
       - "-c"
     args:
-      - 'curl -s https://raw.githubusercontent.com/Dimokus88/near/main/main.sh | bash '
+      - 'curl -s https://raw.githubusercontent.com/Dimokus88/near/main/start.sh | bash '
     expose:
       - port: 80
         as: 80
