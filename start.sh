@@ -52,7 +52,8 @@ echo  ================= Начинаю сборку ==================
 echo  =================== Start build ===================
 sleep 5
 cargo build -p neard --release --features shardnet
-cp /root/nearcore/target/release/neard /usr/local/bin/
+sleep 5m
+cp /root/nearcore/target/release/neard /usr/bin/
 cd /root/
 echo  =================== Завершена сборка ====================
 echo  =================== Build s completed ===================
