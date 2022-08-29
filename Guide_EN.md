@@ -172,10 +172,9 @@ ___
 ## Load your validator_key.json
   
 To load an existing `validator_key.json` file, you can use the `link_key` built-in variable in [deploy.yml](https://github.com/Dimokus88/near/blob/main/deploy.yml) . One way is to download using ***Google drive***, now we will consider it:
-  
-Place your `validator_key.json` file on Google drive, open read access and copy the link to the file. Next, using [service](https://www.votix.ru/p/sozdat-pryamuyu-ssylku-fajla-google-disk.html), create a link for ***direct download***.
-  
-> Or, you can create a link yourself, for this:
+
+I could advise you to use a ready-made link generator from the Internet, but this is a private key, so it's safer if you create a link yourself:  
+
 Access the file on `google` drive and copy its link, it will look like this:
 `https://drive.google.com/open?id=xxxxxxxxxxxxxx-xxxxxxxxxxxx&authuser=gmail%40gmail.com&usp=drive_fs`
  you need to take the part: `id=xxxxxxxxxxxxxx-xxxxxxxxxxxx` and insert before it: `https://drive.google.com/uc?export=download&`.
