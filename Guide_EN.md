@@ -179,7 +179,7 @@ Access the file on `google` drive and copy its link, it will look like this:
 `https://drive.google.com/open?id=xxxxxxxxxxxxxx-xxxxxxxxxxxx&authuser=gmail%40gmail.com&usp=drive_fs`
  you need to take the part: `id=xxxxxxxxxxxxxx-xxxxxxxxxxxx` and insert before it: `https://drive.google.com/uc?export=download&`.
 Thus, you will get a link to a ***direct download*** file:
-`https://drive.google.com/uc?export=download&id=xxxxxxxxxxxxxx-xxxxxxxxxxxx` .
+`https://drive.google.com/uc?export=download&id=xxxxxxxxxxxxxx-xxxxxxxxxxxx` . Check the link by clicking on it in the browser, the download of the file should immediately begin.
   
 Then, go to your deployment in ***Akashlytics***, `UPDATE` tab. Uncomment the `link_key` line (remove the "#" symbol) and paste your link after the "=" symbol.
   
