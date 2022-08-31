@@ -1,6 +1,8 @@
-# Create a wallet on the Near - Shardnet network.
+# Create a wallet on the Near - Testnet.
 
-* Go to ***[web wallet](https://wallet.shardnet.near.org/)*** and click "***Create Account***"
+### The Near Shardnet is coming to an end
+
+* Go to ***[web wallet](https://wallet.testnet.near.org/)*** and click "***Create Account***"
 
 <p align="center"><img src="https://user-images.githubusercontent.com/23629420/180050999-658def48-2cbf-40a0-8316-422faa9b372c.png" width=50% </p>
 
@@ -28,9 +30,11 @@ As you can see, there are already some test tokens on the balance of ***already*
 
 ___
 
-# Создание аккаунта (кошелька) в сети Near - Shardnet.
+# Создание аккаунта (кошелька) в сети Near - Testnet.
+  
+### Near Shardnet подходит к концу!
 
-* Переходим на ***[веб версию кошелька](https://wallet.shardnet.near.org/)*** и нажимаем "***Создать учетную запись***"
+* Переходим на ***[веб версию кошелька](https://wallet.testnet.near.org/)*** и нажимаем "***Создать учетную запись***"
 
 <p align="center"><img src="https://user-images.githubusercontent.com/23629420/180050999-658def48-2cbf-40a0-8316-422faa9b372c.png" width=50% </p>
 
