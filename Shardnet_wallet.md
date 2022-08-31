@@ -4,7 +4,7 @@
 
 * Go to ***[web wallet](https://wallet.testnet.near.org/)*** and click "***Create Account***"
 
-<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180050999-658def48-2cbf-40a0-8316-422faa9b372c.png" width=50% </p>
+<p align="center"><img src="https://user-images.githubusercontent.com/23629420/187704828-20dfade2-8065-4918-a19a-4b1c0525c0ec.png" width=50% </p>
 
 * Set the name of your account (this will be your ***account id***) and click "***Reserve My Account ID***"
 
@@ -36,7 +36,7 @@ ___
 
 * Переходим на ***[веб версию кошелька](https://wallet.testnet.near.org/)*** и нажимаем "***Создать учетную запись***"
 
-<p align="center"><img src="https://user-images.githubusercontent.com/23629420/180050999-658def48-2cbf-40a0-8316-422faa9b372c.png" width=50% </p>
+<p align="center"><img src="https://user-images.githubusercontent.com/23629420/187705166-2b82965d-dcc5-4389-8bc7-053f385e14f8.png" width=50% </p>
 
 * Задаем имя своего аккаунта (это будет ваш ***account id***) и нажимаем "***Reserve My Account ID***"
 
