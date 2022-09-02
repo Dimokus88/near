@@ -34,12 +34,11 @@ profiles:
         memory:
           size: 6Gi
         storage:
-          size: 100Gi
+          size: 200Gi
         
         
   placement:
     akash: 
-      attributes:
       pricing:
         app:
           denom: uakt
