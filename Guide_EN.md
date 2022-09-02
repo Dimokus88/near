@@ -45,7 +45,7 @@ Instructions for installing and configuring ***Akashlytics*** [available here](h
 
 ### Creating an account (wallet) in the network Near - Shardnet.
 
-Instructions for creating an account (wallet) [on the Near - Shardnet network](https://github.com/Dimokus88/near/blob/main/Shardnet_wallet.md#create-a-wallet-on-the-near---shardnet-network).
+Instructions for creating an account (wallet) [on the Near - Shardnet network](https://github.com/Dimokus88/near/blob/main/testnet_wallet.md#create-a-wallet-on-the-near---shardnet-network).
   
 ___
 
