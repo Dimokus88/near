@@ -42,7 +42,7 @@ ___
 
 ### Создание аккаунта (кошелька) в сети Near - Shardnet.
 
-Инструкция по созданию аккаунта (кошелька) [в сети Near - Shardnet](https://github.com/Dimokus88/near/blob/main/Shardnet_wallet.md#создание-аккаунта-кошелька-в-сети-near---shardnet).
+Инструкция по созданию аккаунта (кошелька) [в сети Near - Shardnet](https://github.com/Dimokus88/near/blob/main/testnet_wallet.md#создание-аккаунта-кошелька-в-сети-near---shardnet).
   
 ___
 
